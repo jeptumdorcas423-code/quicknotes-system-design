@@ -1,0 +1,157 @@
+/* General page styling */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f6f9;
+  color: #263238;
+  margin: 0;
+  padding: 30px 16px;
+  line-height: 1.6;
+}
+
+.container {
+  max-width: 750px;
+  margin: 0 auto;
+  background-color: #ffffff;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+}
+
+header {
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+h1 {
+  color: #3157a4;
+  margin-bottom: 5px;
+}
+
+h2 {
+  margin-top: 28px;
+  color: #263238;
+}
+
+section {
+  margin-bottom: 30px;
+}
+
+/* Form styling */
+.form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 16px;
+}
+
+label {
+  font-weight: bold;
+  margin-bottom: 6px;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 11px;
+  border: 1px solid #cbd2d9;
+  border-radius: 6px;
+  font: inherit;
+}
+
+input:focus,
+textarea:focus {
+  outline: 2px solid #8ba8ed;
+  border-color: #3157a4;
+}
+
+/* Button styling */
+button {
+  background-color: #3157a4;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 11px 16px;
+  font: inherit;
+  cursor: pointer;
+}
+
+button:hover:not(:disabled) {
+  background-color: #24427f;
+}
+
+button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* Notes list */
+#notes-list {
+  list-style: none;
+  padding: 0;
+  margin-top: 20px;
+}
+
+.note-card {
+  border: 1px solid #dce1e7;
+  border-radius: 8px;
+  padding: 16px;
+  margin-bottom: 14px;
+  overflow-wrap: anywhere;
+}
+
+.note-card h3 {
+  margin-top: 0;
+}
+
+.note-card p {
+  white-space: pre-wrap;
+}
+
+/* Delete button */
+.delete-btn {
+  background-color: #c0392b;
+  margin-top: 8px;
+}
+
+.delete-btn:hover:not(:disabled) {
+  background-color: #922b21;
+}
+
+/* Status messages */
+#status {
+  padding: 10px 12px;
+  border-radius: 6px;
+}
+
+#status:empty {
+  display: none;
+}
+
+#status.success {
+  background-color: #e6f6eb;
+  color: #176b35;
+}
+
+#status.error {
+  background-color: #fdecea;
+  color: #a12622;
+}
+
+#status.loading {
+  background-color: #eaf1ff;
+  color: #24427f;
+}
+
+/* Smaller screens */
+@media (max-width: 600px) {
+  body {
+    padding: 12px;
+  }
+
+  .container {
+    padding: 20px;
+  }
+}
